@@ -66,6 +66,7 @@ Ahora entonces teniendo el ssh podriamos logearnos al menos que nos pidan una fr
 >[!] Tip
 >
 >El archivo id_rsa debe tener permisos 600.
+>
 >Algunos id_rsa estan cifrados con un passphrase, que en ciertos casos necesitaras para que tu key sea aceptada
 
 
