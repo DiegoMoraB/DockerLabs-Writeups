@@ -52,18 +52,22 @@ Podemos ver unas cuantas accounts, recordemos que la maquina cuenta con un servi
 ```
 <br>
 Probamos con las 2 y encotramos la llave para vaxei<br>
+
 ```bash
 curl http://ip de la maquina/index.php?secret=/home/vaxei/.ssh/id_rsa
 ```
 <br>
+
 ![image](https://github.com/user-attachments/assets/18b82ab6-82a0-4771-9ffb-0d3a714c0ae1)
 <br>
 
-Ahora entonces teniendo el ssh podriamos logearnos al menos que nos pidan un frase para ingresar.
+Ahora entonces teniendo el ssh podriamos logearnos al menos que nos pidan una frase para ingresar.
 
->[!tip] nombre que quieras
+>[!] Tip
 >
->El archivo id_rsa debe tener permisos 600
+>El archivo id_rsa debe tener permisos 600.
+>Algunos id_rsa estan cifrados con un passphrase, que en ciertos casos necesitaras para que tu key sea aceptada
+
 
 
 
