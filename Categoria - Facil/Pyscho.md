@@ -38,8 +38,11 @@ No conocemos el parametro dentro de index.php, por lo tanto podemos proceder a f
 ![image](https://github.com/user-attachments/assets/3cf9e007-1f79-43d1-b579-1cbcbe41ed8c)
 
 Como podemos ver <b>secret</b> es el parametro que esta haciendo el include, primero veremos que usuarios hay en el sistema en /etc/cat
-'''bash
+
+```bash
 curl http://ip de la maquina/index.php?secret=/etc/passwd
-'''
+```
+![image](https://github.com/user-attachments/assets/09391985-3110-46a4-87f7-9e4ef3ab47cc)
+
 
 
