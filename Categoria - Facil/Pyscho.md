@@ -21,8 +21,15 @@ Podemos observar que hay un ERROR al final de la pagina, esto podia indicar que 
 
 ![image](https://github.com/user-attachments/assets/c5a59054-3ca3-4709-9e5c-9977be824c16)
 
+![image](https://github.com/user-attachments/assets/bc2f061c-4341-4f48-a271-fff0b18eecd7)
+
+whatweb no nos da mucha informacion pero con gobuster vemos index.php.
 
 Entonces,que tenemos hasta el momento?
 <ul>
-  <li></li>
+  <li>La pagina esta cargando mal algo</li>
+  <li>Esta usando php</li>
 </ul>
+
+Con esto podemos llegar a la conclusion que posiblemente la pagina esta usando un include() en php en cual podemos derivarlo a un <a href="https://hacktricks.boitatech.com.br/pentesting-web/file-inclusion#file-inclusion" >Local File Inclusion </a>
+
