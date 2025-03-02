@@ -62,6 +62,7 @@ curl http://ip de la maquina/index.php?secret=/home/vaxei/.ssh/id_rsa
 Ahora entonces teniendo el ssh podriamos logearnos al menos que nos pidan un frase para ingresar.
 
 >[!tip] nombre que quieras
+>
 >El archivo id_rsa debe tener permisos 600
 
 
