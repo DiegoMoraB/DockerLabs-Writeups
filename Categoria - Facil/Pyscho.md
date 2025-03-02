@@ -31,5 +31,5 @@ Entonces,que tenemos hasta el momento?
   <li>Esta usando php</li>
 </ul>
 
-Con esto podemos llegar a la conclusion que posiblemente la pagina esta usando un include() en php en cual podemos derivarlo a un <a href="https://hacktricks.boitatech.com.br/pentesting-web/file-inclusion#file-inclusion" >Local File Inclusion </a>
+Con esto podemos llegar a la conclusion que la pagina esta usando un include() en php en cual podemos derivarlo a un <a href="https://hacktricks.boitatech.com.br/pentesting-web/file-inclusion#file-inclusion" >Local File Inclusion </a>
 
