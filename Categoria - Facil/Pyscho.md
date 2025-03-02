@@ -5,8 +5,9 @@
 
 <h2>Reconocimiento</h2>
 <hr>
-Realizamos un escaneo con nmap <br>
+Realizamos un escaneo con nmap
 
+<br>
 
 ![nmap](https://github.com/user-attachments/assets/3d6ed8c0-60c4-47d1-876d-efe438932484)
 
