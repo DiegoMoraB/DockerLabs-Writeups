@@ -33,9 +33,9 @@ Entonces,que tenemos hasta el momento?
   <li>Esta usando php</li>
 </ul>
 
-Con esto podemos llegar a la conclusion que la pagina esta usando un include() en php en cual podemos derivarlo a un <a href="https://hacktricks.boitatech.com.br/pentesting-web/file-inclusion#file-inclusion" >Local File Inclusion </a>
+Con esto podemos llegar a la conclusion que la pagina esta usando un include() en php en cual podemos derivarlo a un <a href="https://hacktricks.boitatech.com.br/pentesting-web/file-inclusion#file-inclusion"  target="_blank" >Local File Inclusion </a>
 
-No conocemos el parametro dentro de index.php, por lo tanto podemos proceder a fuzzear con la herramienta <a href="https://github.com/xmendez/wfuzz">wfuzz</a><br>
+No conocemos el parametro dentro de index.php, por lo tanto podemos proceder a fuzzear con la herramienta <a href="https://github.com/xmendez/wfuzz"  target="_blank">wfuzz</a><br>
 
 ![image](https://github.com/user-attachments/assets/3cf9e007-1f79-43d1-b579-1cbcbe41ed8c)
 
@@ -98,7 +98,7 @@ Con sudo -l nos saldra todos los permisos que podemos ejecutar como sudo si es q
 
 <br>
 
-Ya que podemos ejecutar perl como luisillo, y al ser perl un lenguaje de programacion el proceso de escalado es sencillo con <a href="https://gtfobins.github.io/#">GTFOBins</a>
+Ya que podemos ejecutar perl como luisillo, y al ser perl un lenguaje de programacion el proceso de escalado es sencillo con <a href="https://gtfobins.github.io/#"  target="_blank" >GTFOBins</a>
 
 
 ```bash
@@ -164,7 +164,7 @@ if __name__ == "__main__":
     main()
 ```
 
-Viendo el codigo vemos que las librerias se estan insertando de forma insegura, es ahi donde nosotros haremos un <a href="https://deephacking.tech/path-hijacking-y-library-hijacking/">Library Hijacking</a>.<br>
+Viendo el codigo vemos que las librerias se estan insertando de forma insegura, es ahi donde nosotros haremos un <a href="https://deephacking.tech/path-hijacking-y-library-hijacking/"  target="_blank" >Library Hijacking</a>.<br>
 
 Crearemos un archivo llamado subprocess.py de esta forma:
 
