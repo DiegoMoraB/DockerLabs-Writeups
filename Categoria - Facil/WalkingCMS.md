@@ -32,4 +32,10 @@ Con exito encontramos una pagina WordPress y accedemos a esta.
 >WordPress es un Gestor de Contenido, es una herramienta que nos facilita la creacion de paginas webs, ademas de que incluye muchas herramientas para esto mismo, y suelen tener vulnerabilidades, sobre todo por los plugins.
 
 <br>
-
+<h2>Enumeracion en WordPress</h2>
+<hr> 
+Existen diversas formas de enumerar WordPress, hay algunos archivos o directorios sensibles que podemos buscar dentro de este, como lo pueden ser:
+<li>/wp -admin</li>
+<li>/wp-login.php</li>
+<li>/wp-content/plugins</li>
+<li>/xmlrpc.php</li>
