@@ -42,4 +42,4 @@ Existen diversas formas de enumerar WordPress, hay algunos archivos o directorio
 <br>
 >[+] Tip
 >
->Si recien empiezas en el mundo de ciberseguridad es aconsejable tratar de buscar formas de explotar archivos como <a href="https://nitesculucian.github.io/2019/07/02/exploiting-the-xmlrpc-php-on-all-wordpress-versions/" target=_blank>xmlrpc.php</a> de manera manual. 
+>Si recien empiezas en el mundo de ciberseguridad es aconsejable tratar de buscar formas de explotar archivos como <a href="https://nitesculucian.github.io/2019/07/02/exploiting-the-xmlrpc-php-on-all-wordpress-versions/" target="_blank">xmlrpc.php</a> de manera manual. 
