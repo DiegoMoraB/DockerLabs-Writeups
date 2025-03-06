@@ -8,6 +8,7 @@
 Realizamos un escaneo con nmap
 
 <br>
+
 ![image](https://github.com/user-attachments/assets/594a29cc-1674-47fe-ab74-c0edabe559e1)
 
 Encontramos el puerto 80 abierto, lo que significa que existe un servicio http y/u pagina web.
