@@ -43,4 +43,13 @@ Existen diversas formas de enumerar WordPress, hay algunos archivos o directorio
 
 >[+] Tip
 >
->Si recien empiezas en el mundo de ciberseguridad es aconsejable tratar de buscar formas de explotar archivos como <a href="https://nitesculucian.github.io/2019/07/02/exploiting-the-xmlrpc-php-on-all-wordpress-versions/" target="_blank">xmlrpc.php</a> de manera manual. 
+>Si recien empiezas en el mundo de ciberseguridad es aconsejable tratar de buscar formas de explotar archivos como <a href="https://nitesculucian.github.io/2019/07/02/exploiting-the-xmlrpc-php-on-all-wordpress-versions/" target="_blank">xmlrpc.php</a> de manera manual.
+
+En esta ocasion para enumerar WordPress haremos uso de una herramienta, la cual es <b>wpscan</b>.
+Nos ayudara a encontrar usuarios, plugins vulnerables, themes vulnerables, etc.
+
+```bash
+wpscan --url http://172.17.0.2/wordpress -e vp,u --api-token=XXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+
