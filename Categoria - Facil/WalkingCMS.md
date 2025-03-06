@@ -39,3 +39,7 @@ Existen diversas formas de enumerar WordPress, hay algunos archivos o directorio
 <li>/wp-login.php</li>
 <li>/wp-content/plugins</li>
 <li>/xmlrpc.php</li>
+<br>
+>[+] Tip
+>
+>Si recien empiezas en el mundo de ciberseguridad es aconsejable tratar de buscar formas de explotar archivos como <a href="https://nitesculucian.github.io/2019/07/02/exploiting-the-xmlrpc-php-on-all-wordpress-versions/">xmlrpc.php</a> de manera manual. 
