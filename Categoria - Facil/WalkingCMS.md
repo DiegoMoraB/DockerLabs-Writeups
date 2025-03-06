@@ -51,5 +51,5 @@ Nos ayudara a encontrar usuarios, plugins vulnerables, themes vulnerables, etc.
 ```bash
 wpscan --url http://172.17.0.2/wordpress -e vp,u --api-token=XXXXXXXXXXXXXXXXXXXXXXXX
 ```
-
+Este <a href="https://www.malcare.com/blog/how-to-use-wpscan/">link</a> te ayudara a conseguir tu api token que es completamente gratis
 
