@@ -25,7 +25,11 @@ gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-med
 
 ![image](https://github.com/user-attachments/assets/153142ab-a095-445a-927e-d9727a209f4c)
 
-Con exito encontramos una pagina WordPress.
+Con exito encontramos una pagina WordPress y accedemos a esta.
 
 >[!] Info
->WordPress es un Gestor de Contenido, es una herramienta que nos facilita la creacion de paginas webs
+>
+>WordPress es un Gestor de Contenido, es una herramienta que nos facilita la creacion de paginas webs, ademas de que incluye muchas herramientas para esto mismo, y suelen tener vulnerabilidades, sobre todo por los plugins.
+
+<br>
+
