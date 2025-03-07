@@ -126,3 +126,5 @@ env /bin/sh -p
 ![image](https://github.com/user-attachments/assets/f819ebaf-e78f-4eb0-95a0-ad4e9d82e78d)
 
 De esta manera escalamos satisfactoriamente!
+
+HackTheBox: billyelcalvo
