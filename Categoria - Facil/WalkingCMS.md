@@ -64,6 +64,10 @@ wpscan --url http://172.17.0.2/wordpress -U mario -P /usr/share/wordlists/rockyo
 ```
 ![image](https://github.com/user-attachments/assets/9fcf560f-5906-43fa-8d4b-783972cb3be7)
 
+Accedemos a wp-admin.
+```bash
+http://ip/wordpress/wp-admin
+```
 
 <h2>FootHold</h2>
 <hr>
