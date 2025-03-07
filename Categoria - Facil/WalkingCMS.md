@@ -68,8 +68,30 @@ Accedemos a wp-admin.
 ```bash
 http://ip/wordpress/wp-admin
 ```
+![image](https://github.com/user-attachments/assets/310c1773-ce90-48a1-913d-4fa6a1c9d0ee)
 
 <h2>FootHold</h2>
 <hr>
 
+Ahora buscaremos conseguir una shell para obtener acceso al sistema, recordemos que no encontramos plugins vulnerables con nuestra herramienta wpscan.
+Veamos el apartado de Theme Editor.
+
+![image](https://github.com/user-attachments/assets/38fa937f-1136-41d5-9e20-2d485f206167)
+
+En este apartado podemos ver que nos permite modificar el codigo del tema que se encuentra activo.
+Entre todos los archivo, el mas interesante parece ser el de <b>index.php</b>, ya que si de alguna manera podemos acceder a ese archivo, ejecutaremos ese codigo en el servidor permitiendonos una reverse shell.
+
+Una vez estando en el archivo index.php copiaremos el codigo de este <a href="https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php">enlace</a>, modificando los valores de IP y PORT con los nuestros.
+
+![image](https://github.com/user-attachments/assets/ccbc9167-d462-4529-866f-c9d5dafa76ac)
+
+![image](https://github.com/user-attachments/assets/65b26f64-98c8-4a6a-9f69-ea3d219c4ae2)
+
+>[!] Recordar
+>
+>La ip que pondras en la reverse shell debe ser tu ip en la red de docker, si no la conoces puedes poner ifconfig.
+
+De esta manera procederemos le daremos al boton, update file.
+
+Despues de guardar nuestra reverse shell, iremos a la siguiente ruta.
 
