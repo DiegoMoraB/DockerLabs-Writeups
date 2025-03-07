@@ -106,6 +106,7 @@ Esta ruta suele ser tipica para los themes en WordPress.
 
 <h2>Privilege Escalation</h2>
 <hr>
+<br>
 Para escalar privilegios podremos ver por
 ```bash
 sudo -l 
