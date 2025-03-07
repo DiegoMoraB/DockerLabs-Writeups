@@ -96,7 +96,33 @@ De esta manera procederemos le daremos al boton, update file.
 Despues de guardar nuestra reverse shell, iremos a la siguiente ruta.
 
 ```bash
-/wp-content/themes/twentytwentytwo/index.php o 404.php
+http://tu-ip/wordpress/wp-content/themes/twentytwentytwo/index.php
 ```
 Esta ruta suele ser tipica para los themes en WordPress.
 
+![image](https://github.com/user-attachments/assets/d3ca9d94-65ff-45bc-a2a6-1f7c04bbb793)
+
+<br>
+
+<h2>Privilege Escalation</h2>
+<hr>
+Para escalar privilegios podremos ver por
+```bash
+sudo -l 
+find / -perm -4000 2>/dev/null
+```
+
+Parace ser que sudo no existe o al menos no esta en ninguno de los directorios de PATH.
+![image](https://github.com/user-attachments/assets/502c22ed-01c4-476e-adcf-d0c2022c8c38)
+
+Buscando SUID tuvimos mas suerte, ahora consultaremos a nuestra <a href="https://gtfobins.github.io/">biblia</a> si existe forma de escalar con alguno de estos binarios.
+![image](https://github.com/user-attachments/assets/67d1eab3-0157-4a95-a71b-c4f2b0ddb0df)
+
+Y dentro de este nos dice como escalar con SUID:
+```bash
+env /bin/sh -p
+```
+
+![image](https://github.com/user-attachments/assets/f819ebaf-e78f-4eb0-95a0-ad4e9d82e78d)
+
+De esta manera escalamos satisfactoriamente!
