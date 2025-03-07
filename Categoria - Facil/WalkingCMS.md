@@ -95,3 +95,8 @@ De esta manera procederemos le daremos al boton, update file.
 
 Despues de guardar nuestra reverse shell, iremos a la siguiente ruta.
 
+```bash
+/wp-content/themes/twentytwentytwo/index.php o 404.php
+```
+Esta ruta suele ser tipica para los themes en WordPress.
+
